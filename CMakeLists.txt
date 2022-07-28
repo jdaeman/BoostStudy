@@ -32,8 +32,15 @@ set(BOOST_ALL_LIBRARIES
    ${Boost_THREAD_LIBRARY}
    ${Boost_SYSTEM_LIBRARY}
    ${Boost_ZLIB_LIBRARY}
-   ${Boost_REGEX_LIBRARY})
+   ${Boost_REGEX_LIBRARY}
+   ${Boost_PROGRAM_OPTIONS_LIBRARY})
 
 
 add_executable(csv_parser src/csv_parser.cpp)
 target_link_libraries(csv_parser ${BOOST_ALL_LIBRARIES})
+
+add_executable(url_parser src/url_parser.cpp)
+target_link_libraries(url_parser ${BOOST_ALL_LIBRARIES})
+
+add_executable(program_option src/program_option.cpp)
+target_link_libraries(program_option ${BOOST_ALL_LIBRARIES})
